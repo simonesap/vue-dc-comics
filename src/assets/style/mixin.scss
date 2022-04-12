@@ -1,0 +1,23 @@
+@import './variabili.scss';
+
+@mixin container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+}
