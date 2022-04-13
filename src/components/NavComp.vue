@@ -55,19 +55,22 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../assets/style/mixin.scss';
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  @include reset-css
 }
 
 ul {
+    @include reset-list;
     @include flexRow;
 }
 
 li {
     margin-inline: $mx-5;
+    font-size: $font-size-small;
 }
 
 </style>

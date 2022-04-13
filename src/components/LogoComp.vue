@@ -15,11 +15,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../assets/style/mixin.scss';
-
-    ul {
-        @include reset-list;
-    }
+  
+  #app {
+  @include reset-css
+  }
+    
 
 </style>
