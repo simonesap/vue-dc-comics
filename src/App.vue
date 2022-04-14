@@ -17,11 +17,17 @@
 
     <main>
 
-      <MainMenuComp/>
+      <MainMenuComp id="main-1" />
   
-      <MainCompBody/>
+      <MainCompBody id="main-2" />
 
     </main>
+
+    <footer>
+
+      <FooterComp id="footer" />
+
+    </footer>
 
   </div>
 </template>
@@ -32,6 +38,7 @@ import NavComp from './components/NavComp.vue';
 import JumboTron from './components/JumboTron.vue';
 import MainMenuComp from './components/MainMenuComp.vue';
 import MainCompBody from './components/MainCompBody.vue';
+import FooterComp from './components/FooterComp.vue';
 
 export default {
   name: 'App',
@@ -41,6 +48,7 @@ export default {
     JumboTron,
     MainMenuComp,
     MainCompBody,
+    FooterComp,
   }
 }
 </script>
@@ -68,10 +76,24 @@ export default {
 
   header {
       @include container;
-      @include flexBetween;
-      margin: $my-50 auto;
+      @include flexBetweenAlign;
+      margin: $my-25 auto;
   }
 
+  #main-1 {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    color: $white;
+  }
+
+  #main-2 {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    color: $white;
+  }
+
+  #footer {
+    background: $footer-brown;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+  }
   
    
 

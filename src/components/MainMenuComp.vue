@@ -67,7 +67,7 @@ export default {
     ul {
         @include reset-list; 
         @include container;
-        @include flexBetween;
+        @include flexBetweenAlign;
     }
     
     li {

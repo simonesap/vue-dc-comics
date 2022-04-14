@@ -3,7 +3,7 @@
 
       <ul>
           <li v-for="(element, index) in menuNav" :key="index">
-              {{element.button}}
+              <a href="#">{{element.button}}</a>
           </li>
       </ul>
   
@@ -59,7 +59,6 @@ export default {
 @import '../assets/style/mixin.scss';
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   @include reset-css
 }
 
@@ -69,8 +68,13 @@ ul {
 }
 
 li {
-    margin-inline: $mx-5;
-    font-size: $font-size-small;
+    margin-inline: $mx-12;
+    font-size: $font-size-smallSmall;
+    a {
+        @include textDecorationNone;
+        color: black;
+        font-weight: bold;
+        }
 }
 
 </style>
