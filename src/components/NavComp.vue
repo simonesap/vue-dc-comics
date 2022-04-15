@@ -6,7 +6,8 @@
               <a href="#">{{element.button}}</a>
           </li>
       </ul>
-  
+      <!-- @mouseover="mouseOver" -->
+  <!-- :class="(element == 'inactive') ? 'border-b' : '' " -->
   </div>
 </template>
 
@@ -19,40 +20,63 @@ export default {
       return {
           menuNav: [
               {
-                button: 'CHARACTERS'
+                button: 'CHARACTERS',
+                // status: 'inactive',
               },
               {
-                  button: 'COMICS'
+                button: 'COMICS',
+                // status: 'inactive',
               },
               {
-                  button: 'MOVIES'
+                button: 'MOVIES',
+                // status: 'inactive',
               },
               {
-                  button: 'TV'
+                button: 'TV',
+                // status: 'inactive',
               },
               {
-                  button: 'GAMES'
+                button: 'GAMES',
+                // status: 'inactive',
               },
               {
-                  button: 'COLLECTIBLES'
+                button: 'COLLECTIBLES',
+                // status: 'inactive',
               },
               {
-                  button: 'VIDEOS'
+                button: 'VIDEOS',
+                // status: 'inactive',
               },
               {
-                   button: 'FANS'
+                button: 'FANS',
+                // status: 'inactive',
               },
               {
-                  button: 'NEWS',
+                button: 'NEWS',
+                // status: 'inactive',
               },
               {
-                  button: 'SHOP',
+                button: 'SHOP',
+                // status: 'inactive',
               },
           ],
-  }
+          // Stato di default dell'active per mostrare il bordo all'hover 
+        //   active: true,
+    }
+  
+  },
+//   methods: {
+//       // Funzione hover sull'elemento
+//       mouseOver: function(){
+//                 if(this.active = !this.active){
+//                     this.active = true;
+//                 }  else {
+//                     this.active = false
+//                 }
+//             },
 
 }
-}
+
 </script>
 
 <style lang="scss" scoped>
@@ -65,16 +89,26 @@ export default {
 ul {
     @include reset-list;
     @include flexRow;
+    height: 100%;
 }
 
 li {
     margin-inline: $mx-12;
     font-size: $font-size-smallSmall;
+    padding-bottom: 30px;
     a {
         @include textDecorationNone;
         color: black;
         font-weight: bold;
         }
+};
+
+li:hover {
+  border-bottom: 4px inset $azurre;
 }
+
+    // .border-b {
+    //     border-bottom: 3px solid #0180ff;
+    // }
 
 </style>

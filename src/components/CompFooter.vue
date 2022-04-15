@@ -9,7 +9,7 @@
 
         <div id="col-2">
             <div>
-                    <h3>follow us</h3>
+                <h3>follow us</h3>
             </div>
             
             <div>
@@ -31,15 +31,15 @@
 
 
 export default {
-  name: 'FooterComp',
+  name: 'CompFooter',
   data() {
       return {
           icon: [
-                '../assets/img/footer-facebook.png',
-                '../assets/img/footer-twitter.png',
-                '../assets/img/footer-youtube.png',
-                '../assets/img/footer-pinterest.png',
-                '../assets/img/footer-periscope.png',
+                require('@/assets/img/footer-facebook.png'),
+                require('@/assets/img/footer-twitter.png'),
+                require('@/assets/img/footer-youtube.png'),
+                require('@/assets/img/footer-pinterest.png'),
+                require('@/assets/img/footer-periscope.png'),
           ]
   }
 
@@ -51,17 +51,13 @@ export default {
 @import '../assets/style/mixin.scss';
 
     #app {
-    @include reset-css;
-    }
-
-    img {
-        width: 50px;
-        height: 50px;
+        @include reset-css;
     }
 
     #container {
         @include flexBetween;
         @include container;
+        padding: 15px;
     }
 
     #col-1 {
@@ -75,19 +71,30 @@ export default {
     #list {
         @include reset-list;
         @include flexRow;
+        li {
+            margin: $mx-8;
+        }
     }
 
     button {
-        background: none;
+        background: transparent;
         border: 2px solid $azurre;
         padding: 10px;
         color: $white;
+        font-size: $font-size-ultraSmall;
         text-transform: $text-uppercase;
     }
 
     h3 {
         text-transform: $text-uppercase;
         color: $azurre;
+        font-size: $font-size-small;
+        margin-right: 30px;
+    };
+
+    img {
+        width: 35px;
+        height: 35px;
     }
 
 </style>

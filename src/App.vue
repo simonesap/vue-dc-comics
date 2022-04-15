@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <header>
+    <header class="my-20">
 
       <LogoComp/>
 
@@ -25,20 +25,23 @@
 
     <footer>
 
-      <FooterComp id="footer" />
+      <CompFooter id="footer" />
 
     </footer>
 
   </div>
-</template>
 
+</template>
+    
+    
 <script>
 import LogoComp from './components/LogoComp.vue';
 import NavComp from './components/NavComp.vue';
 import JumboTron from './components/JumboTron.vue';
 import MainMenuComp from './components/MainMenuComp.vue';
 import MainCompBody from './components/MainCompBody.vue';
-import FooterComp from './components/FooterComp.vue';
+import CompFooter from './components/CompFooter.vue';
+
 
 export default {
   name: 'App',
@@ -48,12 +51,14 @@ export default {
     JumboTron,
     MainMenuComp,
     MainCompBody,
-    FooterComp,
-  }
+    CompFooter,
+  },
+  
 }
 </script>
 
 <style lang="scss" scoped>
+@import './assets/style/general.scss';
 @import './assets/style/mixin.scss';
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed&display=swap');
 
@@ -77,7 +82,6 @@ export default {
   header {
       @include container;
       @include flexBetweenAlign;
-      margin: $my-25 auto;
   }
 
   #main-1 {

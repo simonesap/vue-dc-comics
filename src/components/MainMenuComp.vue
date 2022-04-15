@@ -4,8 +4,9 @@
       <div id="main">
           <ul>
               <li v-for="(element,index) in select" :key="index">
-                  <img :src="element.icon" :alt="element.name">
-                  <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+                  <img :src="element.url" role="button">
+                  <a href="#">{{element.name}}</a>
+                  <!-- <img src="../assets/img/buy-comics-digital-comics.png" alt=""> -->
               </li>
           </ul>
       </div>
@@ -25,27 +26,27 @@ export default {
       return {
           select: [
               {
-                name : 'DIGITAL COMICS',
-                icon : '../src/assets/img/buy-comics-digital-comics.png',
+                name: 'DIGITAL COMICS',
+                // icon: '../assets/img/buy-comics-digital-comics.png',
+                url: require('@/assets/img/buy-comics-digital-comics.png'),
               },
               {
                 name: 'DC MERCHANDISE',
-                icon: '../src/assets/img/buy-comics-merchandise.png',
+                url: require('@/assets/img/buy-comics-merchandise.png'),
               },
               {
                 name: 'SUBSCRIPTION',
-                icon: '../src/assets/img/buy-comics-subscriptions.png',
+                url: require('@/assets/img/buy-comics-subscriptions.png'),
               },
               {
                 name: 'COMIC SHOP LOCATOR',
-                icon: '../src/assets/img/buy-comics-shop-locator.png',
+                url: require('@/assets/img/buy-comics-shop-locator.png'),
               },
               {
                 name: 'DC POWER VISA',
-                icon: '../src/assets/img/buy-dc-power-visa.svg',
+                url: require('@/assets/img/buy-dc-power-visa.svg'),
               },
           ],
-          counter: 0,
       }
     }
 }
@@ -71,7 +72,19 @@ export default {
     }
     
     li {
-        padding: $p-30;
+        width: 40%;
+        padding: 20px;
+        @include flexRow;
+        align-items: center;
+          a {
+          @include textDecorationNone;
+          color: $white;
+          }
+          img {
+            width: 45px;
+            height: 55px;
+            margin: 5px;
+          }
     }
 
 </style>

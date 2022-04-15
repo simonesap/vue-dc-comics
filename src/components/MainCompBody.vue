@@ -124,6 +124,7 @@ export default {
 
     #content {
       background: url('../assets/img/footer-bg.jpg');
+      background-size: cover;
       height: 40vh;
     }
 

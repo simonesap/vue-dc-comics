@@ -20,7 +20,7 @@ export default {
 
     #app{
         background: black;
-        height: 20vh;
+        height: 15vh;
         @include reset-css;
     }
 
