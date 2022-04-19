@@ -57,7 +57,7 @@ export default {
     #container {
         @include flexBetween;
         @include container;
-        padding: 15px;
+        padding: 20px;
     }
 
     #col-1 {

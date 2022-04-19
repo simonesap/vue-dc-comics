@@ -125,7 +125,7 @@ export default {
     #content {
       background: url('../assets/img/footer-bg.jpg');
       background-size: cover;
-      height: 40vh;
+      height: 50vh;
     }
 
     h3 {
@@ -144,6 +144,7 @@ export default {
       width: 50%;
       @include flexRow;
       div {
+        align-items: center;
         ul {
           padding: 10px;
           @include reset-list;
@@ -162,14 +163,17 @@ export default {
 
     #col-2 {
       width: 50%;
+      height: 50vh;
        #image {
         margin: 0 auto;
         padding: 0;
         background: url('../assets/img/dc-logo-bg.png');
         background-size: cover;
-        height: 40vh;
-        width: 21vw;
-      }
+        background-position: center;
+        height: 100%;
+        width: 550px;
+       }
+      
     }
 
     #shop {

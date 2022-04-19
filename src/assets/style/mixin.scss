@@ -53,6 +53,22 @@
     align-items: center;
 }
 
+/* Display-flex + Flex-direction-row + Align-items-center + wrap-nowrap */
+@mixin flexRowAlignNoWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+/* Display-flex + Flex-direction-row + Align-items-center + wrap-wrap */
+@mixin flexRowAlignWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 /* Display-flex + Flex-direction-column */
 @mixin flexColumn {
     display: flex;

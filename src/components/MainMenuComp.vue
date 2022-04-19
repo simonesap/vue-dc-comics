@@ -27,7 +27,6 @@ export default {
           select: [
               {
                 name: 'DIGITAL COMICS',
-                // icon: '../assets/img/buy-comics-digital-comics.png',
                 url: require('@/assets/img/buy-comics-digital-comics.png'),
               },
               {

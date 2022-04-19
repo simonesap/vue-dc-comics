@@ -21,6 +21,7 @@ export default {
           menuNav: [
               {
                 button: 'CHARACTERS',
+                url: ''
                 // status: 'inactive',
               },
               {
@@ -95,7 +96,7 @@ ul {
 li {
     margin-inline: $mx-12;
     font-size: $font-size-smallSmall;
-    padding-bottom: 30px;
+    padding-bottom: calc(30px - 4px);
     a {
         @include textDecorationNone;
         color: black;
