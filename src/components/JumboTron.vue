@@ -1,10 +1,11 @@
 <template>
   <div id="app">
     <div class="jmb">
-
+      
     </div>
     <div class="box">
       <div class="container">
+        <div id="labelComic">current series</div>
         <ProductComp v-for="(element,index) in products"
                      :key="index"
                      :img="element.thumb"
@@ -130,6 +131,17 @@ export default {
       height: 45vh;
     }
 
+    #labelComic {
+      text-transform: uppercase;
+      padding: 15px;
+      background: $azurre;
+      color: $white;
+      display: inline-block;
+      position: absolute;
+      top: -70px;
+      left: 0;
+    }
+
     h5 {
       color: $white;
       @include container;
@@ -144,6 +156,7 @@ export default {
     }
 
     .container {
+      position: relative;
       @include flexRowAlignWrap;
       @include container;
       justify-content: center;

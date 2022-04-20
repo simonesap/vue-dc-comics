@@ -45,6 +45,12 @@ export default {
     }
   }
 
+  li:hover {
+    box-shadow: 0px 5px 10px 20px inset $azurre;
+    border-radius: 5%;
+    cursor: pointer;
+  }
+
       img {
         width: 170px;
         height: 220px;
